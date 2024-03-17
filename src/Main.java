@@ -19,23 +19,23 @@ public class Main {
         User user = new User(name, currentAge, retAge);
         Menu menu = new Menu();
 
-        int menuOption = menu.investmentMenu();
+        int menuOption = menu.investmentMenu(scanner);
         while(menuOption != 4) {
             switch (menuOption) {
                 case 1:
-                    int employerMatchMenuOption = menu.createNew401kOr403bMenu();
+                    int employerMatchMenuOption = menu.createNew401kOr403bMenu(scanner);
                     if (employerMatchMenuOption == 1) {
                         // create a new 401k/403b investment
                     }
                     break;
                 case 2:
-                    int iraMenuOption = menu.createNewIRAMenu();
+                    int iraMenuOption = menu.createNewIRAMenu(scanner);
                     if (iraMenuOption == 1) {
                         // create a new ira investment
                     }
                     break;
                 case 3:
-                    int stockMenuOption = menu.createNewStocksMenu();
+                    int stockMenuOption = menu.createNewStocksMenu(scanner);
                     if (stockMenuOption == 1) {
                         // create new stocks investment
                     }
@@ -43,7 +43,7 @@ public class Main {
                 default:
                     System.out.print("\nFatal error.  Option out of range.\n");
             }
-            menuOption = menu.investmentMenu();
+            menuOption = menu.investmentMenu(scanner);
         }
 
         // If the user chooses to exit, display a goodbye message

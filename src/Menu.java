@@ -1,13 +1,7 @@
 import java.util.Scanner;
 
 public class Menu {
-    private static Scanner scanner;
-
-    public Menu() {
-        scanner = new Scanner(System.in);
-    }
-
-    public int investmentMenu() {
+    public int investmentMenu(Scanner scanner) {
         int menuOption;
 
         do {
@@ -29,7 +23,7 @@ public class Menu {
         return menuOption;
     }
 
-    public int createNew401kOr403bMenu() {
+    public int createNew401kOr403bMenu(Scanner scanner) {
         int menuOption;
 
         do {
@@ -49,7 +43,7 @@ public class Menu {
         return menuOption;
     }
 
-    public int createNewIRAMenu() {
+    public int createNewIRAMenu(Scanner scanner) {
         int menuOption;
 
         do {
@@ -69,7 +63,7 @@ public class Menu {
         return menuOption;
     }
 
-    public int createNewStocksMenu() {
+    public int createNewStocksMenu(Scanner scanner) {
         int menuOption;
 
         do {
