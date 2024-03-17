@@ -7,34 +7,7 @@ public class Menu {
         scanner = new Scanner(System.in);
     }
 
-    public static void Main() {
-        int menuOption = investmentMenu();
-        switch(menuOption) {
-            case 1:
-                int employerMatchMenuOption = createNew401kOr403bMenu();
-                if(employerMatchMenuOption == 1) {
-                    // create a new 401k/403b investment
-                }
-                break;
-            case 2:
-                int iraMenuOption = createNewIRAMenu();
-                if(iraMenuOption == 1) {
-                    // create a new ira investment
-                }
-                break;
-            case 3:
-                int stockMenuOption = createNewStocksMenu();
-                if(stockMenuOption == 1) {
-                    // create new stocks investment
-                }
-                break;
-            default:
-                System.out.print("\nFatal error.  Option out of range.\n");
-        }
-
-    }
-
-    public static int investmentMenu() {
+    public int investmentMenu() {
         int menuOption;
 
         do {
@@ -56,13 +29,14 @@ public class Menu {
         return menuOption;
     }
 
-    public static int createNew401kOr403bMenu() {
+    public int createNew401kOr403bMenu() {
         int menuOption;
 
         do {
             System.out.print("\nEnter a menu option: ");
             System.out.print("\n1 - Create a new 401k/403b investment");
             System.out.print("\n2 - Return to the main menu\n");
+            System.out.print("\nEnter menu option here: ");
 
             menuOption = scanner.nextInt();
             System.out.print("\n");
@@ -75,13 +49,14 @@ public class Menu {
         return menuOption;
     }
 
-    public static int createNewIRAMenu() {
+    public int createNewIRAMenu() {
         int menuOption;
 
         do {
             System.out.print("\nEnter a menu option: ");
             System.out.print("\n1 - Create a new IRA investment");
             System.out.print("\n2 - Return to the main menu\n");
+            System.out.print("\nEnter menu option here: ");
 
             menuOption = scanner.nextInt();
             System.out.print("\n");
@@ -94,13 +69,14 @@ public class Menu {
         return menuOption;
     }
 
-    public static int createNewStocksMenu() {
+    public int createNewStocksMenu() {
         int menuOption;
 
         do {
            System.out.print("\nEnter a menu option: ");
            System.out.print("\n1 - Create a new Stock investment");
            System.out.print("\n2 - Return to the main menu\n");
+           System.out.print("\nEnter menu option here: ");
 
            menuOption = scanner.nextInt();
            System.out.print("\n");
